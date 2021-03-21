@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/JeopardyQuestions/static/css/main.b2585bf4.chunk.css",
-    "main.js": "/JeopardyQuestions/static/js/main.f6bca053.chunk.js",
-    "main.js.map": "/JeopardyQuestions/static/js/main.f6bca053.chunk.js.map",
+    "main.js": "/JeopardyQuestions/static/js/main.12cbe16f.chunk.js",
+    "main.js.map": "/JeopardyQuestions/static/js/main.12cbe16f.chunk.js.map",
     "runtime-main.js": "/JeopardyQuestions/static/js/runtime-main.59003590.js",
     "runtime-main.js.map": "/JeopardyQuestions/static/js/runtime-main.59003590.js.map",
     "static/js/2.f91fc3f7.chunk.js": "/JeopardyQuestions/static/js/2.f91fc3f7.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.59003590.js",
     "static/js/2.f91fc3f7.chunk.js",
     "static/css/main.b2585bf4.chunk.css",
-    "static/js/main.f6bca053.chunk.js"
+    "static/js/main.12cbe16f.chunk.js"
   ]
 }
