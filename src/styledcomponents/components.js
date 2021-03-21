@@ -64,7 +64,7 @@ export const CategoryName = styled(MedInfo)`
 export const ValueInfo = styled(MedInfo)`
     color: ${jeopardyYellow};
     font-weight: bold;
-    width: 15%;
+    width: 25%;
     text-shadow: 2px 2px black;
     font-size: 2em;
 `
