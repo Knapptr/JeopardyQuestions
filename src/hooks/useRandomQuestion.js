@@ -22,7 +22,7 @@ export default function useFetch(requestURL){
 
     const requestData = useCallback(
         async ()=>{
-       let response = await fetch('http://jservice.io/api/random') 
+       let response = await fetch('https://jservice.io/api/random') 
        let data = await response.json()
        data = data[0]
        setQuestion(data.question.toUpperCase())
