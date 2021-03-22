@@ -17,11 +17,12 @@ export default function useFetch(requestURL){
     const [category,setCategory] = useState(null)
     const [date,setDate] = useState(null)
     const [value,setValue] = useState(null)
-    const [makeRequest,setMakeRequest] = useState(false)
 
 
     const requestData = useCallback(
         async ()=>{
+            let hasQuestionAndAnswer = false
+            while(!hasQuestionAndAnswer){
        let response = await fetch('https://jservice.io/api/random') 
        let data = await response.json()
        data = data[0]
@@ -30,6 +31,10 @@ export default function useFetch(requestURL){
        setDate(dayjs(data.airdate).format("MMMM D, YYYY"))
        setCategory(data.category.title.toUpperCase())
        setValue(data.value)
+       if(data.question !== "" && data.answer !== ""){
+           hasQuestionAndAnswer = true
+       }
+            }
        setLoading(false)
     },[])
 

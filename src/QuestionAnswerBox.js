@@ -1,5 +1,5 @@
-import {Container,InnerRelativeShell,ContentContainer} from './StyledQuestionAnswerBox'
-import {StyledQuestion, StyledQuestionText} from './styledcomponents/components'
+import {InnerRelativeShell,ContentContainer} from './StyledQuestionAnswerBox'
+import {StyledQuestion,QuestionAnswerText} from './styledcomponents/components'
 
 // box will fade between question and answer
 const QuestionAnswerBox = ({answerVisible,questionVisible,question,answer,clickHandler}) =>{
@@ -8,11 +8,11 @@ const QuestionAnswerBox = ({answerVisible,questionVisible,question,answer,clickH
             <InnerRelativeShell>
                 {/* //question container */}
                 <ContentContainer isVisible={questionVisible}>
-                    <StyledQuestionText>{question}</StyledQuestionText>
+                    <QuestionAnswerText fontSize={question.length>140?[1,2,4]:[2,4,5]} >{question}</QuestionAnswerText>
                 </ContentContainer>
                 {/* // answer container */}
                 <ContentContainer isVisible={answerVisible}>
-                    <StyledQuestionText>{answer}</StyledQuestionText>
+                    <QuestionAnswerText>{answer}</QuestionAnswerText>
                 </ContentContainer>
             </InnerRelativeShell>           
         </StyledQuestion>

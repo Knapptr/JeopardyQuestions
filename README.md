@@ -4,8 +4,7 @@ Retrieves a random question from [jService](http://www.jservice.io)
 
 Needs....some work aesthetically.
 
-## Notable Bugs
 
-- Sometimes jService will return a question with no text. 
+- ~~Sometimes jService will return a question with no text~~ FIXED!
 
-- definetly more....
+ 

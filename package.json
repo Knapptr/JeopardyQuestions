@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "react-spinners": "^0.10.6",
     "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "web-vitals": "^1.1.1"
   },
   "homepage": "https://knapptr.github.io/JeopardyQuestions",

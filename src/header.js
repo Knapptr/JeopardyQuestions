@@ -1,9 +1,9 @@
-import { StyledHeader,MedHeader } from './styledcomponents/components'
+import { StyledHeader,Title } from './styledcomponents/components'
 
 const Header = props =>{
     return(
         <StyledHeader>
-            <MedHeader>JEOPARDY!</MedHeader>
+            <Title>JEOPARDY!</Title>
         </StyledHeader>)
 }
 

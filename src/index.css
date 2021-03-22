@@ -1,6 +1,12 @@
+html{
+  height: 100%;
+  width: 100%;
+}
 body {
-  background-color: #ebebeb;
+  width: 100%;
   margin: 0;
-  font-family: "Open Sans", sans-serif
+  font-family: "Open Sans", sans-serif;
+  background: rgb(3,0,56);
+  background: linear-gradient(223deg, rgba(3,0,56,1) 0%, rgb(50, 8, 82) 100%);
 }
 

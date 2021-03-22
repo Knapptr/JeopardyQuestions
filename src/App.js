@@ -2,15 +2,12 @@ import './App.css';
 import useRandomQuestion from './hooks/useRandomQuestion'
 import Header from './header'
 import LoadingHandler from './LoadingHandler'
-import Question from './Question';
-import Answer from './Answer';
 import QuestionInformation from './QuestionInformation';
-import {StyledQuestion, Button,StyledApp,ContentFrame,Controls,Date} from './styledcomponents/components'
+import {Button,StyledApp,ContentFrame,Controls} from './styledcomponents/components'
 import {useEffect, useState} from 'react'
-import {Fade} from './Fade'
 import QuestionAnswerBox from './QuestionAnswerBox'
 function App() {
-  const {question,answer,category,value,date,loading,requestData,clearFieldsForNewQuestion} = useRandomQuestion() 
+  const {question,answer,category,value,date,loading,requestData} = useRandomQuestion() 
   const [answerVisible,setAnswerVisible] = useState(false)
   const [questionVisible,setQuestionVisible] = useState(false)
 
@@ -46,9 +43,6 @@ function App() {
             clickHandler={toggleQuestionAnswer} 
             />
         </ContentFrame>
-        <Date>
-          {date}
-        </Date>
       <Controls>
         <Button
           onClick={()=>{

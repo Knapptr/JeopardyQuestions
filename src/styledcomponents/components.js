@@ -1,41 +1,73 @@
 import styled from 'styled-components'
+import {space,layout,typography} from 'styled-system'
 
 export const jeopardyBlue = "#061790"
-export const jeopardyGrey = "#f9f9f9"
+export const jeopardyNavy = "#0D0780"
+export const jeopardyLightPurple = "#A76590"
+export const jeopardyLavender = "#A390E4"
 export const jeopardyYellow = "#FFCC00"
-export const jeopardyPurple = "#4f0099"
+export const jeopardyPurple = "#320852"
 export const jeopardyWhite = "#ededed"
+export const jeopardyGray = "#424242"
+export const defaultBoxShadow = "-1px 8px 10px #0b0b0b";
+export const defaultTextShadow = "3px 3px black";
 
 export const StyledApp = styled.div`
     width:100%;
 `
 export const StyledHeader = styled.header`
+${layout}
+${space}
     background-color: ${jeopardyBlue} ;
-    display: flex;
-    flex-direction: column;
-    color: ${jeopardyYellow};
+    border-radius: 2px; 
+    box-shadow: ${defaultBoxShadow};
+    max-width:1000px;
+
 `
+StyledHeader.defaultProps = {
+   py: [3] ,
+   my: [0,1],
+   mx: [0,2,"auto"],
+   
+
+}
+export const Title = styled.h1`
+    margin: 0;
+    ${space}
+    ${layout}
+    ${typography}
+    color: ${jeopardyYellow};
+    font-family: "Oswald";
+
+`
+Title.defaultProps ={
+    fontSize: [5,6],
+    textAlign: "center", 
+    
+}
 
 export const FlexDiv = styled.div`
     display: flex;
     flex-direction: column;
 `
 export const StyledQuestionInformation = styled.div`
-    margin: .5em;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Helvetica',sans-serif;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: ${jeopardyBlue};
-    padding: 10px;
-    height: 100px;
-    border-radius: 2%;
-    max-width: 500px;
-    
+    margin: auto;
+    box-shadow: ${defaultBoxShadow};
+    ${layout} 
+    ${space}
     `
-export const SmallHeader = styled.h4`
+StyledQuestionInformation.defaultProps = {
+    width: [1,3/4,1/2],
+    height: ["auto",135],
+    my: 3,
+    py: 2
+} 
+ export const SmallHeader = styled.h4`
     font-size: .75em;
     margin: .25em;
 `
@@ -51,60 +83,93 @@ export const MedInfo = styled.p`
     width: 100%;
 `
 export const MedHeader = styled.h2`
-    margin: .25em;
+    margin: 0;
 `
-export const CategoryName = styled(MedInfo)`
+export const CategoryName = styled.h2`
     color: ${jeopardyWhite};
     font-weight: bold;
-    text-align: center;
-    text-shadow: 3px 3px black;
-    width: 60%;
+    text-shadow: ${defaultTextShadow} ;
     font-family: "Open Sans", sans;
+    min-height: 44px;
+    ${typography}
+    ${space}
+    ${layout}
 `
+CategoryName.defaultProps = {
+    width: [1,1/2],
+    textAlign: ["center","left"],
+    fontSize: [3,4],
+    my: 1
+}
 export const ValueInfo = styled(MedInfo)`
     color: ${jeopardyYellow};
     font-weight: bold;
-    width: 25%;
     text-shadow: 2px 2px black;
-    font-size: 2em;
+    visibility: ${props=>props.visibility} ;
+    ${typography}
+    ${space}
+    ${layout}
 `
+ValueInfo.defaultProps= {
+    width: [1,1/8],
+    textAlign: "center",
+    fontSize: [4,4,5],
+    my: 1
+}
 export const VisibilityToggle = styled.div`
     visibility: ${props => props.visible? "visibile":"hidden"};
 `
 export const Button = styled.button`
     cursor: pointer;
-    margin: 5px;
     height: 35px;
-    background-color: ${jeopardyPurple};
-    color: ${jeopardyYellow}; 
+    background-color: ${jeopardyBlue};
+    color: ${jeopardyWhite}; 
     font-weight: bold;
     min-width: 110px;
     border: none;
-    border-radius: 7%;
+    border-radius: 4px;
+    ${layout}
+    ${space}
 
     &:hover{
         box-shadow: 0px 1px 1px black;
     }
 `
+Button.defaultProps = {
+    mx: 2
+}
+
 export const StyledAnswer = styled.div`
         margin: 1em;
 `
 export const StyledQuestion = styled.div`
     cursor: pointer;
-    margin: auto;
-    max-width: 400px;
-    height: 200px;
     background-color: ${jeopardyBlue};
     font-weight: bold;
-    padding: 75px;
     color: white;
-    box-shadow: -1px 8px 10px lightgray;
+    box-shadow: ${defaultBoxShadow};
+    margin: auto;
+    ${layout}
+    ${space}
 `
+StyledQuestion.defaultProps = {
+    width: [1,3/4,1/2],
+    height: [200,320,400],
+}
 
-export const StyledQuestionText = styled(MedInfo)`
+export const QuestionAnswerText= styled.p`
     font-family: "Newsreader",serif;
-    text-shadow: 3px 3px black;
+    text-shadow: ${defaultTextShadow};
+    ${typography}
+    ${space}
+    ${layout}
 `
+QuestionAnswerText.defaultProps = {
+    fontSize: [2,4,5],
+    px: [4,6,5],
+    maxWidth: [350,400],
+    lineHeight: 1.5
+}
 
 export const StyledLoadingWrapper = styled.div`
     margin: auto;
@@ -114,9 +179,14 @@ export const StyledLoadingWrapper = styled.div`
     align-items: center;
 `
 export const ContentFrame = styled.div`
-    max-width: 75%;
-    margin: auto;
+    ${layout}
+    ${space}
 `
+ContentFrame.defaultProps = {
+    mb: [4,2],
+    mx: "auto"
+
+}
 export const Controls = styled.div`
     margin: 10px;
     display: flex;
@@ -125,5 +195,13 @@ export const Controls = styled.div`
 `
 export const Date = styled.div`
     text-align: center;
-   font-size: .8em; 
+    font-size: .8em; 
+    color: ${jeopardyWhite};
+    ${layout};
+    ${space};
+    ${typography};
 `
+Date.defaultProps = {
+    width: 1,
+    fontSize: [1,2] 
+}
